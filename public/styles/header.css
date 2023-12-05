@@ -1,0 +1,27 @@
+/* styles/header.css */
+
+body header {
+  height: 400px;
+  width: 100%;
+  background-color: #D6C394; /* Replace with your preferred color */
+  background-image: url('/images/debut-dark.png');
+
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body header img {
+  /* Adjust the max-width and max-height properties as needed */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body header h2 {
+  margin-top: 15px; /* Adjust as needed for spacing between avatar and name */
+  font-family: 'Bungee', sans-serif; /* Use the imported font */
+}
+
+/* Additional styles can be added based on your preferences */
