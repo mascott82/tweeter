@@ -93,18 +93,23 @@ $(function() {
   // add an event listener that listens for the submit event
   $('#tweetSubmit').on('click', function(event) {
     event.preventDefault();
-
-    $.ajax('/tweets', {
-      method: 'POST',
-      dataType: 'text',
-      data: $('form').serialize()
-    }).done(function() {
-      console.info("sucess");
-    }).fail(function() {
-      console.error("error");
-    }).always(function() {
-      console.log("complete");
-    });
+    const inputData = $('#tweet-text').val();
+    
+    if (inputData.trim() === '' || inputData === null || inputData.length > 140) {
+      alert("Please input correct content!");
+    } else {
+      $.ajax('/tweets', {
+        method: 'POST',
+        dataType: 'text',
+        data: $('form').serialize()
+      }).done(function() {
+        console.info("sucess");
+      }).fail(function() {
+        console.error("error");
+      }).always(function() {
+        console.log("complete");
+      });
+    }
   });
 
   loadTweets();
