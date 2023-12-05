@@ -80,4 +80,23 @@ $(function() {
   };
 
   renderTweets(data);
+
+  // add an event listener that listens for the submit event
+  $('#tweetSubmit').on('click', function(event) {
+    event.preventDefault();
+    console.log('Document was clicked');
+    console.log($('form').serialize());
+
+    $.ajax('/tweets', {
+      method: 'POST',
+      dataType: 'text',
+      data: $('form').serialize()
+    }).done(function() {
+      console.info("sucess");
+    }).fail(function() {
+      console.error("error");
+    }).always(function() {
+      console.log("complete");
+    });
+  });
 });
