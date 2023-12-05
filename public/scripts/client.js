@@ -43,6 +43,17 @@ const data = [
 ];
 
 $(function() {
+
+  // load tweets from server.
+  const loadTweets = function() {
+    $.ajax('/tweets', {
+      method: 'GET',
+    }).done(function(data) {
+      renderTweets(data);
+    });
+  };
+
+
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet');
     const html = `
@@ -79,13 +90,9 @@ $(function() {
     });
   };
 
-  renderTweets(data);
-
   // add an event listener that listens for the submit event
   $('#tweetSubmit').on('click', function(event) {
     event.preventDefault();
-    console.log('Document was clicked');
-    console.log($('form').serialize());
 
     $.ajax('/tweets', {
       method: 'POST',
@@ -99,4 +106,6 @@ $(function() {
       console.log("complete");
     });
   });
+
+  loadTweets();
 });
