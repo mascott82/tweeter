@@ -1,0 +1,66 @@
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+main section h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main section textarea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 5px solid #000000;
+  resize: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 60px; /* Adjust the height as needed */
+  padding-top: 20px; /* Adjust the padding to move text to the bottom */
+  box-sizing: border-box; /* Include padding in the total height */
+  background-color: inherit;
+}
+
+main section div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 15px;
+}
+
+main section div button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', sans-serif;
+}
+
+main section div output {
+  font-family: 'Bungee', sans-serif;
+}
+
+main .tweet {
+  margin-top: 3em;
+}
+
+main .tweet header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+main .tweet header img {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 50px;
+  height: 50px;
+}
