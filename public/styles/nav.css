@@ -1,0 +1,33 @@
+/* nav.css */
+
+/* Style for the nav */
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em; /* 1.5ems of space on the right and left */
+  font-family: 'Bungee', sans-serif;
+}
+
+/* Style the "Write a new tweet" section */
+nav .write-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav .write-tweet span {
+  font-family: 'Source Sans 3', sans-serif;
+  margin-right: 0.5em;
+}
+
+nav .write-tweet i {
+  color: #E93001;
+}
+
+/* Add Font Awesome icon */
