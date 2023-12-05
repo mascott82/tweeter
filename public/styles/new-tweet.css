@@ -120,3 +120,10 @@ main .tweet footer .actions a:hover {
 main .tweet footer .actions i {
   margin-right: 5px;
 }
+
+main .new-tweet #error-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: red;
+}

@@ -62,8 +62,10 @@ $(function() {
     event.preventDefault();
     const inputData = $('#tweet-text').val();
     
-    if (inputData.trim() === '' || inputData === null || inputData.length > 140) {
-      alert("Please input correct content!");
+    if (inputData.trim() === '' || inputData === null) {
+      $('#error-message').text("Please input correct content!").slideDown();
+    } else if (inputData.length > 140) {
+      $('#error-message').text('⚠️ Too long. Plz rspct our arbitary limit of 140 chars. #kthxbye. ⚠️').slideDown();
     } else {
       $.ajax('/tweets', {
         method: 'POST',
@@ -75,6 +77,7 @@ $(function() {
         console.error("error");
       }).always(function() {
         $('#tweet-text').val('');
+        $('#error-message').slideUp();
         loadTweets();
         console.log("complete");
       });
