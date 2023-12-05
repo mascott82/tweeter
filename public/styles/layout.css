@@ -27,6 +27,12 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+main {
+  width: 90%;
+  margin: 0 auto; /* This will center-align the <main> element */
+  background-color: inherit; /* This will make <main> have the same background color as the body */
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
