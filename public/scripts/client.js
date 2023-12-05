@@ -6,6 +6,9 @@
 
 $(function() {
 
+  $('#error-message').hide();
+  $('#new-tweet').hide();
+
   // Function to escape HTML entities
   const escapeHTML = function(str) {
     return $('<div>').text(str).html();
@@ -20,6 +23,11 @@ $(function() {
     });
   };
 
+  // Event listener for 'Write a new tweeet'.
+  $('#write-tweet').on('click', function() {
+    $('#new-tweet').slideToggle();
+    $('#tweet-text').focus();
+  });
 
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet');

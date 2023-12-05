@@ -34,7 +34,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div class="write-tweet">
+      <div class="write-tweet"  id="write-tweet">
         <div class="tweet-row">
           <span>Write a new tweet</span>
         </div>
@@ -56,9 +56,9 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="new-tweet" id="new-tweet">
         <h2>Compose Tweet</h2>
-        <div id="error-message" style="display:none;"></div>
+        <div id="error-message"></div>
         <form action="/tweets" method="post">
           <!--
           <label for="tweet-text">What are you humming about?</label>
