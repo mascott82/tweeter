@@ -47,14 +47,25 @@ main section div output {
   font-family: 'Bungee', sans-serif;
 }
 
+/* Style the tweet */
 main .tweet {
-  margin-top: 3em;
+  margin-top: 2em;
+  border: 5px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+main .tweet:hover {
+  /* Apply box-shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 main .tweet header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
+  align-items: baseline;
 }
 
 main .tweet header img {
@@ -63,4 +74,42 @@ main .tweet header img {
   justify-content: start;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main .tweet header .user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 30px;
+}
+
+/* Style the tweet content */
+main .tweet-content {
+  margin: 10px 0;
+}
+
+/* Style the footer within the tweet */
+main .tweet footer {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+}
+
+main .tweet footer .actions a {
+  text-decoration: none;
+  color: #888;
+  margin-right: 10px;
+}
+
+main .tweet footer .actions a:hover {
+  /* Change icon color on tweet hover */
+  color: #007bff; /* Change to your desired hover color */
+}
+
+main .tweet footer .actions i {
+  margin-right: 5px;
 }
