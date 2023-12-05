@@ -6,6 +6,11 @@
 
 $(function() {
 
+  // Function to escape HTML entities
+  const escapeHTML = function(str) {
+    return $('<div>').text(str).html();
+  };
+
   // load tweets from server.
   const loadTweets = function() {
     $.ajax('/tweets', {
@@ -20,15 +25,15 @@ $(function() {
     const $tweet = $('<article>').addClass('tweet');
     const html = `
       <header>
-        <img class="avatar" src="${tweet.user.avatars}" alt="User Avatar">
+        <img class="avatar" src="${escapeHTML(tweet.user.avatars)}" alt="User Avatar">
         <div class="user-info">
-          <h2>${tweet.user.name}</h2>
-          <p>${tweet.user.handle}</p>
+          <h2>${escapeHTML(tweet.user.name)}</h2>
+          <p>${escapeHTML(tweet.user.handle)}</p>
         </div>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escapeHTML(tweet.content.text)}</p>
       <footer>
-        <p>${timeago.format(tweet.created_at)}</p>
+        <p>${escapeHTML(timeago.format(tweet.created_at))}</p>
         <div class="actions">
           <a href="#"><i class="far fa-comment"></i></a>
           <a href="#"><i class="fas fa-retweet"></i></a>
