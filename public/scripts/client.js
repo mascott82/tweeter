@@ -66,7 +66,7 @@ $(function() {
       </header>
       <p>${tweet.content.text}</p>
       <footer>
-        <p>${tweet.created_at}</p>
+        <p>${timeago.format(tweet.created_at)}</p>
         <div class="actions">
           <a href="#"><i class="far fa-comment"></i></a>
           <a href="#"><i class="fas fa-retweet"></i></a>
