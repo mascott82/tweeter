@@ -4,6 +4,8 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -32,27 +34,29 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav id="navBar">
-      <span>tweeter</span>
-      <div class="write-tweet"  id="write-tweet">
-        <div class="tweet-row">
-          <span>Write a new tweet</span>
+    <section id="titleArea" class="titleArea">
+      <nav id="navBar">
+        <span>tweeter</span>
+        <div class="write-tweet"  id="write-tweet">
+          <div class="tweet-row">
+            <span>Write a new tweet</span>
+          </div>
+          <div class="tweet-row">
+            <i class="fas fa-angle-double-down"></i>
+          </div>
         </div>
-        <div class="tweet-row">
-          <i class="fas fa-angle-double-down"></i>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </header>
+      <header>
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Your Name</h2>
+        </div>
+      </header>
+    </section>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -91,14 +95,6 @@
           </footer>
         </article>
       </section>
-      
-      <h1>LOREM IPSUM</h1>
-        <h2>
-          The classic latin passage that just never gets old, enjoy as much (or as little) lorem ipsum as you can handle with our easy to use filler text generator.      
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
       <button id="scrollToTopBtn" class="fa-solid fa-up-to-line"></button>
     </main>
   </body>

@@ -3,15 +3,18 @@
 /* Style for the nav */
 nav {
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 1.5em; /* 1.5ems of space on the right and left */
   font-family: 'Bungee', sans-serif;
+  z-index: 1000;
 }
 
 /* Style the "Write a new tweet" section */

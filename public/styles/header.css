@@ -5,6 +5,8 @@ body header {
   width: 100%;
   background-color: #D6C394; /* Replace with your preferred color */
   background-image: url('/images/debut-dark.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   /* Flexbox to center content */
   display: flex;

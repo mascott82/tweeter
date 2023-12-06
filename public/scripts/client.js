@@ -31,25 +31,26 @@ $(function() {
 
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet');
-    const html = `
-      <header>
-        <img class="avatar" src="${escapeHTML(tweet.user.avatars)}" alt="User Avatar">
-        <div class="user-info">
-          <h2>${escapeHTML(tweet.user.name)}</h2>
-          <p>${escapeHTML(tweet.user.handle)}</p>
-        </div>
-      </header>
-      <p>${escapeHTML(tweet.content.text)}</p>
-      <footer>
-        <p>${escapeHTML(timeago.format(tweet.created_at))}</p>
-        <div class="actions">
-          <a href="#"><i class="far fa-comment"></i></a>
-          <a href="#"><i class="fas fa-retweet"></i></a>
-          <a href="#"><i class="far fa-heart"></i></a>
-        </div>
-      </footer>
-    `;
   
+    const html = `
+    <header>
+      <img src="${escapeHTML(tweet.user.avatars)}" alt="User Profile Image">
+      <div class="user-info">
+        <h2>${escapeHTML(tweet.user.name)}</h2>
+        <p>${escapeHTML(tweet.user.handle)}</p>
+      </div>
+    </header>
+    <p class="tweet-content">${escapeHTML(tweet.content.text)}</p>
+    <footer>
+      <div>${escapeHTML(timeago.format(tweet.created_at))}</div>
+      <div class="actions">
+        <a href="#"><i class="far fa-comment"></i></a>
+        <a href="#"><i class="fas fa-retweet"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+      </div>
+    </footer>
+    `;
+
     $tweet.html(html);
   
     return $tweet;

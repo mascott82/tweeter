@@ -1,4 +1,4 @@
-main section {
+main .new-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,13 +6,13 @@ main section {
   padding-right: 1.5em;
 }
 
-main section h2 {
+main .new-tweet h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-main section textarea {
+main .new-tweet textarea {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -29,7 +29,7 @@ main section textarea {
   background-color: inherit;
 }
 
-main section div {
+main .new-tweet div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,13 +37,13 @@ main section div {
   margin-top: 15px;
 }
 
-main section div button {
+main .new-tweet div button {
   background-color: #4056A1;
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;
 }
 
-main section div output {
+main .new-tweet div output {
   font-family: 'Bungee', sans-serif;
 }
 
@@ -88,36 +88,38 @@ main .tweet header .user-info {
 }
 
 /* Style the tweet content */
-main .tweet-content {
+main .tweets-container .tweet-content {
   margin: 10px 0;
 }
 
 /* Style the footer within the tweet */
-main .tweet footer {
+main .tweets-container .tweet footer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: end;
   color: #888;
 }
 
-main .tweet footer .actions {
+main .tweets-container .tweet footer .actions {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  width: 100%;
 }
 
-main .tweet footer .actions a {
+main .tweets-container .tweet footer .actions a {
   text-decoration: none;
   color: #888;
   margin-right: 10px;
 }
 
-main .tweet footer .actions a:hover {
+main .tweets-container .tweet footer .actions a:hover {
   /* Change icon color on tweet hover */
   color: #007bff; /* Change to your desired hover color */
 }
 
-main .tweet footer .actions i {
+main .tweets-container .tweet footer .actions i {
   margin-right: 5px;
 }
 
