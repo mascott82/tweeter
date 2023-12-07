@@ -1,4 +1,5 @@
 /* nav.css */
+
 /* Style for the nav */
 nav {
   position: fixed;
@@ -12,7 +13,7 @@ nav {
   color: #FFFFFF;
   align-items: center;
   padding: 0 1.5em; /* 1.5ems of space on the right and left */
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   z-index: 1000;
 }
 
@@ -24,7 +25,7 @@ nav .write-tweet {
 }
 
 nav .write-tweet span {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   margin-right: 0.5em;
 }
 

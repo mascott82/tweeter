@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +13,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #efede2;
   font-size: 24px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
@@ -32,8 +32,9 @@ body {
     color: #545149;
     background-color: #f4f1ec;
     font-size: 24px;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
   }
+
   body .belowNav {
     display: flex;
     flex-direction: row;
@@ -41,37 +42,44 @@ body {
     align-items: flex-start;
     margin-top: 120px;
   }
+
   body .belowNav .headerBar {
     width: 30%;
     margin-top: 2em;
     margin-left: 2em;
     margin-right: 2em;
   }
+
   body .belowNav .container {
     width: 70%;
     margin-left: 2em;
     margin-right: 2em;
   }
 }
+
 /*
  * Nav layout
  */
 body nav span {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
+
 
 @media only screen and (max-width: 1024px) {
   /* Write Tablet only CSS here */
+
   body .container {
     width: 90%;
     margin: 0 auto; /* This will center-align the <main> element */
     background-color: inherit; /* This will make <main> have the same background color as the body */
   }
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-#scrollToTopBtn {
+
+ #scrollToTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -82,4 +90,4 @@ body nav span {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-}
+ }
