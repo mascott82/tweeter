@@ -95,10 +95,13 @@ $(function() {
         data: $('form').serialize()
       }).done(function() {
         // Reset the tweet text area, hide error message, and reload tweets on successful submission
+        $('.counter').text(140);
         $('#tweet-text').val('');
         $('#error-message').slideUp();
 
         loadTweets();
+      }).fail(function() {
+        console.error('Failed to submit.');
       });
     }
   });
