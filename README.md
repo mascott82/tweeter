@@ -13,8 +13,8 @@ The application is built using HTML, CSS, JS, jQuery, and AJAX to create a simpl
 * **AJAX Communications:** The application communicates with a server via AJAX, enabling real-time updates without refreshing the entire page.
 
 ### USer Interface
-* **Navigation Bar**
-![Navigation Bar!](/images/navBar.png "Navigation Bar")
+* **Navigation Bar**  
+![Navigation Bar!](./public/images/navBar.png "Navigation Bar")
 
 ## Dependencies
 
