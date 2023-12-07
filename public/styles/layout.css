@@ -19,13 +19,6 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
-  box-sizing: border-box;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Write Tablet only CSS here */
-
-
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
@@ -40,12 +33,27 @@ body {
     background-color: #f4f1ec;
     font-size: 24px;
     font-family: 'Source Sans 3', sans-serif;
-    box-sizing: border-box;
   }
 
-  body .titleArea {
+  body .belowNav {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 120px;
+  }
+
+  body .belowNav .headerBar {
+    width: 30%;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  body .belowNav .container {
+    width: 70%;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 }
 
@@ -56,10 +64,15 @@ body nav span {
   font-family: 'Bungee', sans-serif;
 }
 
-body .container {
-  width: 90%;
-  margin: 0 auto; /* This will center-align the <main> element */
-  background-color: inherit; /* This will make <main> have the same background color as the body */
+
+@media only screen and (max-width: 1024px) {
+  /* Write Tablet only CSS here */
+
+  body .container {
+    width: 90%;
+    margin: 0 auto; /* This will center-align the <main> element */
+    background-color: inherit; /* This will make <main> have the same background color as the body */
+  }
 }
 
 /*
