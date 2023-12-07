@@ -6,6 +6,7 @@
 
 $(function() {
 
+  // Hide error message and new tweet form initially
   $('#error-message').hide();
   $('#new-tweet').hide();
 
@@ -14,21 +15,24 @@ $(function() {
     return $('<div>').text(str).html();
   };
 
-  // load tweets from server.
+  // Function to load tweets from the server
   const loadTweets = function() {
     $.ajax('/tweets', {
       method: 'GET',
     }).done(function(data) {
+      // Render tweets on successful retrieval
       renderTweets(data);
     });
   };
 
-  // Event listener for 'Write a new tweeet'.
+  // Event listener for 'Write a new tweet' button
   $('#write-tweet').on('click', function() {
+    // Toggle visibility of the new tweet form and focus on the tweet input field
     $('#new-tweet').slideToggle();
     $('#tweet-text').focus();
   });
 
+  // Function to create HTML element for a single tweet
   const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet');
   
@@ -51,46 +55,54 @@ $(function() {
     </footer>
     `;
 
+    // Set the HTML content of the tweet element
     $tweet.html(html);
   
     return $tweet;
   };
 
+  // Function to render an array of tweets
   const renderTweets = function(tweets) {
     const $tweetsContainer = $('.tweets-container');
+    // Clear existing tweets in the container
     $tweetsContainer.empty();
-  
+    
+    // Iterate through tweets and prepend each to the container
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.prepend($tweet);
     });
   };
 
-  // add an event listener that listens for the submit event
+  // Event listener for the tweet submission form
   $('#tweetSubmit').on('click', function(event) {
     event.preventDefault();
+    // Get the input data from the tweet text area
     const inputData = $('#tweet-text').val();
     
+    // Validate the input data
     if (inputData.trim() === '' || inputData === null) {
+      // Display error message for empty input
       $('#error-message').text("Please input correct content!").slideDown();
     } else if (inputData.length > 140) {
+      // Display error message for exceeding character limit
       $('#error-message').text('⚠️ Too long. Plz rspct our arbitary limit of 140 chars. #kthxbye. ⚠️').slideDown();
     } else {
+      // Perform AJAX request to submit the tweet
       $.ajax('/tweets', {
         method: 'POST',
         dataType: 'text',
         data: $('form').serialize()
       }).done(function() {
-        
-      }).fail(function() {
-        
-      }).always(function() {
+        // Reset the tweet text area, hide error message, and reload tweets on successful submission
         $('#tweet-text').val('');
         $('#error-message').slideUp();
+
         loadTweets();
       });
     }
   });
 
+  // Initial load of tweets when the page is ready
   loadTweets();
 });
