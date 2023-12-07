@@ -81,14 +81,13 @@ $(function() {
         dataType: 'text',
         data: $('form').serialize()
       }).done(function() {
-        console.info("sucess");
+        
       }).fail(function() {
-        console.error("error");
+        
       }).always(function() {
         $('#tweet-text').val('');
         $('#error-message').slideUp();
         loadTweets();
-        console.log("complete");
       });
     }
   });
