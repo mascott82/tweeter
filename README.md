@@ -1,7 +1,12 @@
 # Tweeter Project - Responsive Web Design
 
 ## Overview
-Tweeter is not just a Twitter clone; it's a responsive web application that seamlessly adapts to various screen sizes, ensuring an optimal user experience across devices. Built with HTML, CSS (utilizing SASS for styling), JS, jQuery, and AJAX, Tweeter maintains its functionality while providing a visually pleasing and accessible design on both desktop and mobile platforms.
+Tweeter is not just a Twitter clone; it's a responsive web application that seamlessly adapts to various screen sizes, ensuring an optimal user experience across devices. Built with HTML, CSS (utilizing SASS for styling), JS, jQuery, and AJAX, Tweeter maintains its functionality while providing a visually pleasing and accessible design on both desktop and mobile platforms.  
+
+
+![Regular view!](./public/images/regular.png "Regular view")
+
+![Desktop view!](./public/images/desktop.png "Desktop view")
 
 ## Features
 
@@ -14,9 +19,9 @@ Tweeter is not just a Twitter clone; it's a responsive web application that seam
 * **Navigation Bar**  
 ![Navigation Bar!](./public/images/navBar.png "Navigation Bar")
 * **Compose Tweet Box**  
-![Navigation Bar!](./public/images/composeBox.png "Navigation Bar")
+![Compose Tweet Box!](./public/images/composeBox.png "Compose Tweet Box")
 * **List of Tweets**  
-![Navigation Bar!](./public/images/list.png "Navigation Bar")
+![Tweet List!](./public/images/list.png "Tweet List")
 
 ### Stretch Features
 * Navigation Bar Animation  
