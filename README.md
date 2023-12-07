@@ -1,16 +1,20 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+## Overview
+Tweeter is a single-page Twitter clone developed as a front-end (client-side) project. 
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+The application is built using HTML, CSS, JS, jQuery, and AJAX to create a simplified yet functional social media experience. The goal of the project is to implement a responsive and visually appealing user interface, focusing on the client-side functionalities.
 
-## Getting Started
+## Features
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+### Basic Features
+
+* **Single Page App (SPA):** Tweeter is designed as a Single Page App, ensuring a seamless and dynamic user experience without the need for page reloads.
+* **AJAX Communications:** The application communicates with a server via AJAX, enabling real-time updates without refreshing the entire page.
+
+### USer Interface
+* **Navigation Bar**
+![Navigation Bar!](/images/navBar.png "Navigation Bar")
 
 ## Dependencies
 
